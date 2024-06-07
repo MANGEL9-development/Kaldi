@@ -1,0 +1,14 @@
+{
+    "sites":[
+        {
+            "name":"Home",
+            "path":"/",
+            "children":[]
+        },
+        {
+            "name":"Menu",
+            "path":"Menu",
+            "children":[]
+        }
+    ]
+}

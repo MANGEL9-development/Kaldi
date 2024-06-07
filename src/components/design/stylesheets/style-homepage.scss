@@ -1,0 +1,27 @@
+@import "style-main";
+
+#homepage-title{
+    background: {
+        image:url("../images/backgrounds/pexels-julieaagaard-2467287.jpg");
+        size:cover;
+        position:bottom;
+    };
+    height:90vh;
+
+    #homepage-title-film{
+        background-color:RGBA(0, 0, 0, 0.34);
+        height:100%;
+        padding:0 $page-padding;
+    }
+
+    #page-title-container{
+        color:$lightColor;
+
+        #website-title{
+            font: {
+                size: 4em;
+                weight:300;
+            }
+        }
+    }
+}
