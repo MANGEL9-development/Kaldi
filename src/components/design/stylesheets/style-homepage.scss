@@ -3,25 +3,34 @@
 #homepage-title{
     background: {
         image:url("../images/backgrounds/pexels-julieaagaard-2467287.jpg");
+        // This might also be a good background https://images.pexels.com/photos/1656434/pexels-photo-1656434.jpeg?cs=srgb&dl=pexels-nguy-n-khanh-790383-1656434.jpg&fm=jpg&_gl=1*qskte*_ga*MjkxMTA2MDUuMTU4Mzk3ODY2OA..*_ga_8JE65Q40S6*MTcxOTYzNDIzMi4xNC4xLjE3MTk2MzUxNzMuMC4wLjA.
         size:cover;
-        position:bottom;
+        position-y:-734px;
     };
     height:90vh;
 
     #homepage-title-film{
-        background-color:RGBA(0, 0, 0, 0.34);
+        background-color:RGBA(0, 0, 0, 0.57);
         height:100%;
-        padding:0 $page-padding;
+        padding:0;
     }
 
     #page-title-container{
         color:$lightColor;
+        padding:$page-padding;
 
         #website-title{
-            font: {
-                size: 4em;
+            font:{
+                size:7em;
                 weight:300;
             }
+            margin:0;
+            margin-top:10vh;
         }
     }
 }
+
+    #homepage-main-section{
+        min-height:110vh;
+        background-color:$lightBackgroundColor;
+    }

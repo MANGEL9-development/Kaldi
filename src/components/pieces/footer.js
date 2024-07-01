@@ -11,7 +11,9 @@ function footer(){
     });
 
     return (
-        <footer></footer>
+        <footer>
+            <h2>Kaldi</h2>
+        </footer>
     );
 }
 

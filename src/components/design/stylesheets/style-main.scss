@@ -1,17 +1,21 @@
 $mainColor: #4A211B;
 $lightColor:#FFE5DB;
+$lightBackgroundColor:#E8D4CD;
 /*
   Other colors in palette:
     #ffE5DB
     #7E4E46
 */
-$footerBackgroundColor:#1b1b1b;
+$footerBackgroundColor:#201711;
 
-$page-padding:5vw;
+$page-padding:0 5vw;
+$menu-height:65px;
+
+// Try the Krylon font
 
 
 
-html,body{
+html,body,h1,h2,h3,h4,h5,h6{
     margin:0;
     padding:0;
 }
@@ -20,12 +24,34 @@ footer{
     background-color:$footerBackgroundColor;
 }
 
+a{
+    text-decoration:none;
+    color:$lightColor;
+}
+
 #menubar{
+    height:$menu-height;
+    background-image:linear-gradient(#00000044,#00000000);
+    padding:$page-padding;
     ul{
         margin:0;
         padding:0;
+        height:100%;
         li{
             list-style:none;
+            display:inline-block;
+            height:100%;
+            a{
+                display:block;
+                height:100%;
+                line-height:$menu-height;
+                padding:0 1em;
+                text-transform:uppercase;
+                ::after{
+                    height:2px;
+                    background-color:$lightColor;
+                }
+            }
         }
     }
 }
