@@ -1,3 +1,8 @@
+@font-face{
+    font-family:"Krylon";
+    src:url("../fonts/krylon_211223/Krylon-Regular.otf");
+}
+
 $mainColor: #4A211B;
 $lightColor:#FFE5DB;
 $lightBackgroundColor:#E8D4CD;
@@ -7,6 +12,7 @@ $lightBackgroundColor:#E8D4CD;
     #7E4E46
 */
 $footerBackgroundColor:#201711;
+$titleColor:$lightColor;
 
 $page-padding:0 5vw;
 $menu-height:65px;
@@ -21,7 +27,37 @@ html,body,h1,h2,h3,h4,h5,h6{
 }
 
 footer{
+    padding:$page-padding;
+    padding-top:40px;
+    padding-bottom:20px;
+    display: grid;
+
+    // -- Desktop view
     background-color:$footerBackgroundColor;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 32px;
+    grid-template-areas:
+        "website-title links" 
+        "copyright     copyright";
+    grid-row-gap: 15vh;
+
+    #footer-website-title{
+        color:$titleColor;
+        font:{
+            family:"Krylon";
+            size:2.5em;
+        };
+    }
+
+    #footer-copyright{
+        grid-area:copyright;
+        
+        #copyright-statement{
+            text-align:center;
+            width:100%;
+            display:block;
+        }
+    }
 }
 
 a{
@@ -48,10 +84,15 @@ a{
                 padding:0 1em;
                 text-transform:uppercase;
                 ::after{
+                    // TODO: find out how to make this work
                     height:2px;
                     background-color:$lightColor;
                 }
             }
         }
     }
+}
+
+#search-container{
+    // TODO: take styles from search bar in Stylish Donuts
 }

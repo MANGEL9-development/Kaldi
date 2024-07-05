@@ -2,7 +2,7 @@
 
 #homepage-title{
     background: {
-        image:url("../images/backgrounds/pexels-julieaagaard-2467287.jpg");
+        image:url("../images/backgrounds/pexels-fotios-photos-1855214.jpg");
         // This might also be a good background https://images.pexels.com/photos/1656434/pexels-photo-1656434.jpeg?cs=srgb&dl=pexels-nguy-n-khanh-790383-1656434.jpg&fm=jpg&_gl=1*qskte*_ga*MjkxMTA2MDUuMTU4Mzk3ODY2OA..*_ga_8JE65Q40S6*MTcxOTYzNDIzMi4xNC4xLjE3MTk2MzUxNzMuMC4wLjA.
         size:cover;
         position-y:-734px;
@@ -10,19 +10,20 @@
     height:90vh;
 
     #homepage-title-film{
-        background-color:RGBA(0, 0, 0, 0.57);
+        background-color:RGBA(13,9,8,0.74);
         height:100%;
         padding:0;
     }
 
     #page-title-container{
-        color:$lightColor;
+        color:$titleColor;
         padding:$page-padding;
 
         #website-title{
             font:{
                 size:7em;
-                weight:300;
+                weight:200;
+                family:"Krylon";
             }
             margin:0;
             margin-top:10vh;

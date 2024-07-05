@@ -9,6 +9,16 @@
             "name":"Menu",
             "path":"Menu",
             "children":[]
+        },
+        {
+            "name":"About",
+            "path":"About",
+            "children":[]
+        },
+        {
+            "name":"Contact",
+            "path":"Contact",
+            "children":[]
         }
     ]
 }
