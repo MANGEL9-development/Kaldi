@@ -3,12 +3,19 @@
         {
             "name":"Home",
             "path":"/",
-            "children":[]
+            "children":[],
+            "showInFooterSiteMap":false
         },
         {
             "name":"Menu",
             "path":"Menu",
-            "children":[]
+            "children":[
+                {
+                    "name":"Drinks",
+                    "path":"Menu",
+                    "children":[]
+                }
+            ]
         },
         {
             "name":"About",

@@ -20,6 +20,7 @@ function menubar(){
     sitemap.sites.forEach(function(site){
         links.push(
             <li>
+                {/* TODO: Add icons in the links */}
                 <a href={site.path}>{site.name}</a>
             </li>
         );

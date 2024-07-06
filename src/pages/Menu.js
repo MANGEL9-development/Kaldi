@@ -1,11 +1,10 @@
-import menubar from "../components/pieces/menubar";
+import subsite from "../components/page-templates/subsite";
 
 const Menu = () => {
-    return <>
-        {menubar()}
+    return subsite(<>
         <h1>Menu</h1>
-        </>;
-  };
+    </>);
+};
   
 export default Menu;
   
