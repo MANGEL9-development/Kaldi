@@ -13,7 +13,7 @@ const Home = () => {
                     <div id="title-subtitle">
                         <h1 className="website-title" id="website-title">Kaldi</h1>
                         <span id="page-subtitle">
-                            A cafe experience like no other
+                            A caf&#233; experience like no other
                         </span>
                     </div>
                 </div>

@@ -30,7 +30,9 @@ function menubar(){
             <ul>
                 {links}
             </ul>
-            {searchBar()}
+            <div id="searchbar-container">
+                {searchBar()}
+            </div>
             {/* Add an account button somewhere */}
         </nav>
     );

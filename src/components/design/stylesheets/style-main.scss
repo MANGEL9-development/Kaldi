@@ -14,10 +14,12 @@ $lightBackgroundColor:#E8D4CD;
 $footerBackgroundColor:#201711;
 $titleColor:$lightColor;
 
-$page-padding:0 5vw;
+$page-outer-padding:5vw;
+$page-padding:0 $page-outer-padding;
 $menu-height:65px;
 
 $standard-transition-time:0.2s;
+$standard-transition:$standard-transition-time linear;
 
 // Try the Krylon font
 
@@ -65,13 +67,20 @@ footer{
 a{
     text-decoration:none;
     color:$lightColor;
+    transition:$standard-transition;
 }
 
 #menubar{
     height:$menu-height;
     background-image:linear-gradient(#00000044,#00000000);
     padding:$page-padding;
+
+    display:grid;
+    grid-template-areas:  "nav-links searchbar";
+    grid-template-columns: auto      auto;
+
     ul{
+        grid-area:nav-links;
         margin:0;
         padding:0;
         height:100%;
@@ -85,101 +94,124 @@ a{
                 line-height:$menu-height;
                 padding:0 1em;
                 text-transform:uppercase;
-                ::after{
-                    // TODO: find out how to make this work
-                    height:2px;
-                    background-color:$lightColor;
+                &::after{
+                    content: '';
+                    position:relative;
+                    top:-0.75em;
+                    display:block;
+                    width:100%;
+                    height:1px;
+                    border-radius:0.1em;
+                    transform:scaleX(0%);
+                    transform-origin:50%;
+                    transition:$standard-transition;
+                    background-image:linear-gradient(90deg,#FFFFFF00,$lightColor,#FFFFFF00);
+                    opacity:0.5;
+                }
+                &:hover{
+                    text-shadow:0px 0px 1px $lightColor;
+                    &::after{
+                        transform: scaleX(150%);
+                    }
                 }
             }
         }
     }
-}
 
-#searchbar{
-    /*padding-top:8px;*/
-    padding-right:4px;
-    /*padding-bottom:8px;*/
-    padding-left:16px;
-    border-radius:16px;
-    border:1px solid HSLA(0,0%,100%,0.5);
-    transition-duration:var(--standard-transition-time);
-    transition-property:all;
-
-    /* Desktop view */
-    width:60%;
-    height:32px;
-    margin:auto;
-    display:inline-block;
-
-    &:hover{
-        box-shadow:
-            0px 0px 5px 0px HSLA(0,0%,100%,0.5),
-            0px 0px 3px 0px HSLA(0,0%,100%,0.5) inset;
-    }
-    &.focused{
-        background-color:HSLA(0,0%,100%,0.25);
-    }
-
-    #search-input-container{
-        width:calc(100% - 4px);
-        height:100%; /*height:16px;*/
+    #searchbar-container{
         grid-area:searchbar;
-        display:grid;
-        grid-template-columns:auto 16px;
-        grid-template-areas:"input button";
+        display:flex;
+        align-items:center;
+        justify-content:right;
 
-        input{
-            border:none;
-            outline:none;
-            box-sizing:border-box;
-            vertical-align:top;
-            margin:0;
-            padding:0;
-            background:none;
-            grid-area:input;
-            color:hsla(0, 0%, 100%, 0.75);
+        #searchbar{
+            /*padding-top:8px;*/
+            padding-right:4px;
+            /*padding-bottom:8px;*/
+            padding-left:16px;
+            border-radius:16px;
+            border:1px solid HSLA(0,0%,100%,0.5);
+            transition-duration:$standard-transition-time;
+            transition-property:all;
 
-            &::placeholder{
-                color:hsla(0, 0%, 100%, 0.5);
-                opacity:1;
-            }
-        }
-        
-        button{
-            vertical-align:top;
-            grid-area:button;
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            background-color:transparent;
-            background-image:url("../images/Icons/search-interface-symbol.png");
-            background-position:center;
-            background-repeat:no-repeat;
-            background-size:contain;
-            border:none;
-            box-shadow:none;
+            /* Desktop view */
+            width:60%;
+            height:32px;
+            display:block;
 
             &:hover{
-                /* background-image:none; */
-                box-shadow:none;
+                box-shadow:
+                    0px 0px 5px 0px HSLA(0,0%,100%,0.5),
+                    0px 0px 3px 0px HSLA(0,0%,100%,0.5) inset;
+            }
+            &.focused{
+                background-color:HSLA(0,0%,100%,0.25);
             }
 
-            #search-button-onhover{
-                opacity:0;
-                transition-duration:var($standard-transition-time);
-                width:100%;
-                height:100%;
-                background-image:url("../images/Icons/search-interface-symbol_on-hover.png");
-                background-position:center;
-                background-repeat:no-repeat;
-                background-size:contain;
-            }
-            &:hover{
-                #search-button-onhover{
-                    opacity:1;
+            #search-input-container{
+                width:calc(100% - 4px);
+                height:100%; /*height:16px;*/
+                grid-area:searchbar;
+                display:grid;
+                grid-template-columns:auto 16px;
+                grid-template-areas:"input button";
+
+                input{
+                    border:none;
+                    outline:none;
+                    box-sizing:border-box;
+                    vertical-align:top;
+                    margin:0;
+                    padding:0;
+                    background:none;
+                    grid-area:input;
+                    color:hsla(0, 0%, 100%, 0.75);
+
+                    &::placeholder{
+                        color:hsla(0, 0%, 100%, 0.5);
+                        opacity:1;
+                    }
+                }
+                
+                button{
+                    vertical-align:top;
+                    grid-area:button;
+                    margin:0;
+                    padding:0;
+                    box-sizing:border-box;
+                    background-color:transparent;
+                    background-image:url("../images/Icons/search-interface-symbol.png");
+                    background-position:center;
+                    background-repeat:no-repeat;
+                    background-size:contain;
+                    border:none;
+                    box-shadow:none;
+
+                    &:hover{
+                        /* background-image:none; */
+                        box-shadow:none;
+                    }
+
+                    #search-button-onhover{
+                        opacity:0;
+                        transition-duration:$standard-transition-time;
+                        width:100%;
+                        height:100%;
+                        background-image:url("../images/Icons/search-interface-symbol_on-hover.png");
+                        background-position:center;
+                        background-repeat:no-repeat;
+                        background-size:contain;
+                    }
+                    &:hover{
+                        #search-button-onhover{
+                            opacity:1;
+                        }
+                    }
                 }
             }
+            
         }
     }
     
 }
+

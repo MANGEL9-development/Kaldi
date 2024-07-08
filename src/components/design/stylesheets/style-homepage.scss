@@ -10,14 +10,14 @@
     height:90vh;
 
     #homepage-title-film{
-        background-color:RGBA(13,9,8,0.74);
+        background-color:RGBA(13,9,8,0.77);
         height:100%;
         padding:0;
     }
 
     #page-title-container{
         color:$titleColor;
-        padding:$page-padding;
+        padding:15vh $page-outer-padding;
 
         #website-title{
             font:{
