@@ -17,6 +17,8 @@ $titleColor:$lightColor;
 $page-padding:0 5vw;
 $menu-height:65px;
 
+$standard-transition-time:0.2s;
+
 // Try the Krylon font
 
 
@@ -93,6 +95,91 @@ a{
     }
 }
 
-#search-container{
-    // TODO: take styles from search bar in Stylish Donuts
+#searchbar{
+    /*padding-top:8px;*/
+    padding-right:4px;
+    /*padding-bottom:8px;*/
+    padding-left:16px;
+    border-radius:16px;
+    border:1px solid HSLA(0,0%,100%,0.5);
+    transition-duration:var(--standard-transition-time);
+    transition-property:all;
+
+    /* Desktop view */
+    width:60%;
+    height:32px;
+    margin:auto;
+    display:inline-block;
+
+    &:hover{
+        box-shadow:
+            0px 0px 5px 0px HSLA(0,0%,100%,0.5),
+            0px 0px 3px 0px HSLA(0,0%,100%,0.5) inset;
+    }
+    &.focused{
+        background-color:HSLA(0,0%,100%,0.25);
+    }
+
+    #search-input-container{
+        width:calc(100% - 4px);
+        height:100%; /*height:16px;*/
+        grid-area:searchbar;
+        display:grid;
+        grid-template-columns:auto 16px;
+        grid-template-areas:"input button";
+
+        input{
+            border:none;
+            outline:none;
+            box-sizing:border-box;
+            vertical-align:top;
+            margin:0;
+            padding:0;
+            background:none;
+            grid-area:input;
+            color:hsla(0, 0%, 100%, 0.75);
+
+            &::placeholder{
+                color:hsla(0, 0%, 100%, 0.5);
+                opacity:1;
+            }
+        }
+        
+        button{
+            vertical-align:top;
+            grid-area:button;
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            background-color:transparent;
+            background-image:url("../images/Icons/search-interface-symbol.png");
+            background-position:center;
+            background-repeat:no-repeat;
+            background-size:contain;
+            border:none;
+            box-shadow:none;
+
+            &:hover{
+                /* background-image:none; */
+                box-shadow:none;
+            }
+
+            #search-button-onhover{
+                opacity:0;
+                transition-duration:var($standard-transition-time);
+                width:100%;
+                height:100%;
+                background-image:url("../images/Icons/search-interface-symbol_on-hover.png");
+                background-position:center;
+                background-repeat:no-repeat;
+                background-size:contain;
+            }
+            &:hover{
+                #search-button-onhover{
+                    opacity:1;
+                }
+            }
+        }
+    }
+    
 }
