@@ -1,6 +1,6 @@
 import sitemap from "../sitemap.json"
 
-function footer(){
+function Footer(){
     let links=[];
     sitemap.sites.forEach(function(site){
         links.push(
@@ -21,7 +21,7 @@ function footer(){
             <div id="footer-copyright">
                 <span id="copyright-statement">
                     Designed by&nbsp;
-                    <a href="https://www.linkedin.com/in/mark-angelot/" target="_blank">
+                    <a href="https://www.linkedin.com/in/mark-angelot/" target="_blank" rel="noreferrer">
                         Mark E Angelot
                     </a>
                 </span>
@@ -30,4 +30,4 @@ function footer(){
     );
 }
 
-export default footer;
+export default Footer;

@@ -1,9 +1,9 @@
-import subsite from "../components/page-templates/subsite";
+import Subsite from "../components/page-templates/subsite";
 
 const Menu = () => {
-    return subsite(<>
+    return <Subsite>
         <h1>Menu</h1>
-    </>);
+    </Subsite>
 };
   
 export default Menu;

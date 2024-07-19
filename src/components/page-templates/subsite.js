@@ -1,14 +1,15 @@
-import menubar from "../pieces/menubar";
-import footer from "../pieces/footer";
+import Menubar from "../pieces/menubar";
+import Footer from "../pieces/footer";
 
-const Menu = (contents) => {
+const Subsite = ({title,children}) => {
     return <>
-        {menubar()}
+        <Menubar />
         <section id="main-section">
-            {contents}
+            {children}
+            <p>{title}</p> {/* this is a test, remove this later*/}
         </section>
-        {footer()}
+        <Footer />
     </>;
   };
-  
-export default Menu;
+
+export default Subsite;

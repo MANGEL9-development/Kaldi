@@ -25,7 +25,7 @@ $standard-transition:$standard-transition-time linear;
 
 
 
-html,body,h1,h2,h3,h4,h5,h6{
+html,body,h1,h2,h3,h4,h5,h6,p{
     margin:0;
     padding:0;
 }
@@ -72,8 +72,8 @@ a{
 
 #menubar{
     height:$menu-height;
-    background-image:linear-gradient(#00000044,#00000000);
     padding:$page-padding;
+    background-color:#4A211B;
 
     display:grid;
     grid-template-areas:  "nav-links searchbar";
@@ -144,7 +144,7 @@ a{
                     0px 0px 5px 0px HSLA(0,0%,100%,0.5),
                     0px 0px 3px 0px HSLA(0,0%,100%,0.5) inset;
             }
-            &.focused{
+            &:focus-within{
                 background-color:HSLA(0,0%,100%,0.25);
             }
 
@@ -215,3 +215,9 @@ a{
     
 }
 
+#main-section{
+    min-height:100vh;
+    background-color: #302725; // This was just kinda set out of the blue, so feel free to change if need be
+
+    padding:$page-outer-padding $page-outer-padding;
+}

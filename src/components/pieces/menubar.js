@@ -1,6 +1,6 @@
 import sitemap from "../sitemap.json"
 
-function searchBar(){
+function SearchBar(){
     return (
         <form id="searchbar" class="">
             <div id="search-input-container">
@@ -31,7 +31,7 @@ function menubar(){
                 {links}
             </ul>
             <div id="searchbar-container">
-                {searchBar()}
+                <SearchBar />
             </div>
             {/* Add an account button somewhere */}
         </nav>

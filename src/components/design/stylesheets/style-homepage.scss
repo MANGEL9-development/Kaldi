@@ -29,9 +29,14 @@
             margin-top:10vh;
         }
     }
+
+    #menubar{
+        background-image:linear-gradient(#00000044,#00000000);
+        background-color:transparent;
+    }
 }
 
-    #homepage-main-section{
-        min-height:110vh;
-        background-color:$lightBackgroundColor;
-    }
+#homepage-main-section{
+    min-height:110vh;
+    background-color:$lightBackgroundColor;
+}
