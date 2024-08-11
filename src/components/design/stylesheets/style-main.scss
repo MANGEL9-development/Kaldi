@@ -2,6 +2,10 @@
     font-family:"Krylon";
     src:url("../fonts/krylon_211223/Krylon-Regular.otf");
 }
+@font-face {
+    font-family:"Raleway";
+    src: url("../fonts/Raleway/Raleway-VariableFont_wght.ttf");
+}
 
 $mainColor: #4A211B;
 $lightColor:#FFE5DB;
@@ -13,6 +17,7 @@ $lightBackgroundColor:#E8D4CD;
 */
 $footerBackgroundColor:#201711;
 $titleColor:$lightColor;
+$headerColor:$lightColor;
 
 $page-outer-padding:5vw;
 $page-padding:0 $page-outer-padding;
@@ -28,6 +33,40 @@ $standard-transition:$standard-transition-time linear;
 html,body,h1,h2,h3,h4,h5,h6,p{
     margin:0;
     padding:0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family:"Raleway";
+    color:$headerColor;
+    font-weight:300;
+}
+h1{
+    font-size:4em;
+}
+h2{
+    font-size:3.5em;
+    // &::after{
+    //     content:' ';
+    //     background-color: $headerColor;
+    //     height:2px;
+    //     width:100%;
+    //     position: relative;
+    //     display:block;
+    //     top:-1em;
+    // }
+    margin-bottom: 0.2em;
+}
+h3{
+    font-size:3em;
+}
+h4{
+    font-size:2.75em;
+}
+h5{
+    font-size:2.5em;
+}
+h6{
+    font-size:2.25em;
 }
 
 footer{
@@ -145,7 +184,7 @@ a{
                     0px 0px 3px 0px HSLA(0,0%,100%,0.5) inset;
             }
             &:focus-within{
-                background-color:HSLA(0,0%,100%,0.25);
+                background-color:HSLA(0,0%,100%,0.12);
             }
 
             #search-input-container{

@@ -19,6 +19,7 @@ const Home = () => {
                 </div>
             </div>
         </section>
+        {/* TODO: make a ripped paper transition between title and main section */}
         <section id="homepage-main-section">
             {/* 
 
