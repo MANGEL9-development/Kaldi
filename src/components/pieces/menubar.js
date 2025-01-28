@@ -1,16 +1,22 @@
 import sitemap from "../sitemap.json"
 
-function SearchBar(){
+function SearchBar(props){
     return (
         <form id="searchbar" class="">
             <div id="search-input-container">
-                <input type="search" name="searchquery" id="search-input" placeholder="What are you craving?"/>
+                <input type="search" name="searchquery" id="search-input" placeholder={props.placeholder} />
                 {/* TODO: add .focused to #search-input-container when input is focused. remove on blur */}
                 <button type="submit">
                     <div id="search-button-onhover"></div>
                 </button>
             </div>
         </form>
+    );
+}
+
+function AccountIcon(){
+    return (
+        <div></div>
     );
 }
 
@@ -31,9 +37,9 @@ function menubar(){
                 {links}
             </ul>
             <div id="searchbar-container">
-                <SearchBar />
+                <SearchBar placeholder="What are you craving?" />
             </div>
-            {/* Add an account button somewhere */}
+            <AccountIcon />
         </nav>
     );
 }

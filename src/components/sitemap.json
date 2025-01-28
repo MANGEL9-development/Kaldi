@@ -11,21 +11,60 @@
             "path":"Menu",
             "children":[
                 {
-                    "name":"Drinks",
-                    "path":"Menu",
+                    "name":"Coffee",
+                    "path":"Menu/coffee",
+                    "children":[]
+                },
+                {
+                    "name":"Tea",
+                    "path":"Menu/tea",
+                    "children":[]
+                },
+                {
+                    "name":"Hot Chocolate",
+                    "path":"Menu/hotchocolate",
+                    "children":[]
+                },
+                {
+                    "name":"Desserts",
+                    "path":"Menu/dessert",
+                    "children":[]
+                },
+                {
+                    "name":"Salads",
+                    "path":"Menu/salads",
                     "children":[]
                 }
-            ]
+            ],
+            "showInFooterSiteMap":true
         },
         {
             "name":"About",
             "path":"About",
-            "children":[]
+            "children":[],
+            "showInFooterSiteMap":true
         },
         {
             "name":"Contact",
             "path":"Contact",
-            "children":[]
+            "children":[
+                {
+                    "name":"LinkedIn",
+                    "path":"https://www.linkedin.com/in/mark-angelot/",
+                    "children":[]
+                },
+                {
+                    "name":"GitHub",
+                    "path":"github.com/mangel9-development",
+                    "children":[]
+                },
+                {
+                    "name":"Handshake",
+                    "path":"joinhandshake.com/profiles/13172222",
+                    "children":[]
+                }
+            ],
+            "showInFooterSiteMap":true
         }
     ]
 }

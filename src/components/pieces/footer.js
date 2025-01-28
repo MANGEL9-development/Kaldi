@@ -3,9 +3,11 @@ import sitemap from "../sitemap.json"
 function Footer(){
     let links=[];
     sitemap.sites.forEach(function(site){
+        // console.log(site.name);
         links.push(
             <li>
                 <a href={site.path}>{site.name}</a>
+                {childLinks(site)}
             </li>
         );
     });
@@ -16,7 +18,9 @@ function Footer(){
                 <h2 class="website-title" id="footer-website-title">Kaldi</h2>
             </div>
             <div className="footer-section" id="footer-links">
-                {/* Put links here */}
+                <ul>
+                    {links}
+                </ul>
             </div>
             <div id="footer-copyright">
                 <span id="copyright-statement">
@@ -28,6 +32,26 @@ function Footer(){
             </div>
         </footer>
     );
+}
+
+function childLinks(site){
+    if(site.children.length>0){
+        return(
+            <ul>
+                {
+                    site.children.map((subLink, index) => (
+                        <li key={index}>
+                            <a href={subLink.path}>{subLink.name}</a>
+                        </li>
+                    ))
+                }
+            </ul>
+        );
+
+    }
+    else{
+        return null;
+    }
 }
 
 export default Footer;

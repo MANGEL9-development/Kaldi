@@ -39,4 +39,16 @@
 #homepage-main-section{
     min-height:110vh;
     background-color:$lightBackgroundColor;
+
+    // TODO: figure out how to get the torn page effect
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 200%;
+    //     height: 20px;
+    //     width: 100%;
+    //     left: 0;
+    //     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg) bottom;
+    //     background-size: 100%;
+    // }
 }
