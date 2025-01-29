@@ -11,18 +11,23 @@
             "path":"Menu",
             "children":[
                 {
-                    "name":"Coffee",
-                    "path":"Menu/coffee",
+                    "name":"Coffees",
+                    "path":"Menu/coffees",
                     "children":[]
                 },
                 {
-                    "name":"Tea",
-                    "path":"Menu/tea",
+                    "name":"Teas",
+                    "path":"Menu/teas",
                     "children":[]
                 },
                 {
-                    "name":"Hot Chocolate",
-                    "path":"Menu/hotchocolate",
+                    "name":"Hot Chocolates",
+                    "path":"Menu/hotchocolates",
+                    "children":[]
+                },
+                {
+                    "name":"Sandwiches",
+                    "path":"Menu/sandwiches",
                     "children":[]
                 },
                 {
@@ -51,16 +56,19 @@
                 {
                     "name":"LinkedIn",
                     "path":"https://www.linkedin.com/in/mark-angelot/",
+                    "target":"_blank",
                     "children":[]
                 },
                 {
                     "name":"GitHub",
                     "path":"github.com/mangel9-development",
+                    "target":"_blank",
                     "children":[]
                 },
                 {
                     "name":"Handshake",
                     "path":"joinhandshake.com/profiles/13172222",
+                    "target":"_blank",
                     "children":[]
                 }
             ],

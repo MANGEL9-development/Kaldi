@@ -41,6 +41,24 @@
     background-color:$lightBackgroundColor;
 
     // TODO: figure out how to get the torn page effect
+    &::before {
+        content: "";
+        position: relative;
+        top: -28px;
+        height: 28px;
+        width: 100%;
+        left: 0;
+        background:{
+            image: url("../images/Effects/Torn page/rip.svg");
+            size:100%;
+            position:bottom;
+        };
+        display:block;
+        transform:scaleY(-1);
+        
+    }
+
+    // This code works, but has the effect on the bottom of this section
     // &::before {
     //     content: "";
     //     position: absolute;
@@ -48,7 +66,7 @@
     //     height: 20px;
     //     width: 100%;
     //     left: 0;
-    //     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg) bottom;
+    //     background: url("../images/Effects/Torn page/rip.svg") bottom;
     //     background-size: 100%;
     // }
 }

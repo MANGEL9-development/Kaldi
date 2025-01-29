@@ -16,6 +16,7 @@ $lightBackgroundColor:#E8D4CD;
     #7E4E46
 */
 $footerBackgroundColor:#201711;
+$footerTextColor:hsl(17, 16%, 65%); // hsl(17, 92%, 93%);
 $titleColor:$lightColor;
 $headerColor:$lightColor;
 
@@ -77,12 +78,17 @@ footer{
 
     // -- Desktop view
     background-color:$footerBackgroundColor;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto 32px;
-    grid-template-areas:
-        "website-title links" 
-        "copyright     copyright";
-    grid-row-gap: 15vh;
+    grid:{
+        template:{
+            columns: auto 1fr;
+            rows: auto 32px;
+            areas:
+                "website-title  links" 
+                "copyright      copyright";
+        }
+        column-gap: 15vh;
+        row-gap: 15vh;
+    }
 
     #footer-website-title{
         color:$titleColor;
@@ -92,6 +98,42 @@ footer{
         };
     }
 
+    #footer-links{
+        grid-area:links;
+
+        ul{
+            padding:0;
+            margin:0;
+        }
+        &>ul{
+            width:100%;
+            height:100%;
+            display:flex;
+            flex-direction:row;
+            justify-content:space-between;
+            &>li>a{
+                font-size:1.25em;
+                display:block;
+                text-transform:uppercase;
+            }
+
+        }
+        li{
+            list-style-type:none;
+            ul{
+                margin-top:0.5em;
+                li a{
+                    color:hsl(17, 16%, 65%);
+                    display:block;
+                    font-variant:small-caps;
+                    &:hover{
+                        color:hsl(21, 28%, 76%);
+                    }
+                }
+            }
+        }
+    }
+
     #footer-copyright{
         grid-area:copyright;
         
@@ -99,6 +141,10 @@ footer{
             text-align:center;
             width:100%;
             display:block;
+            font-size:0.85em;
+            #copyright-pre-link-text{
+                color:$footerTextColor;
+            }
         }
     }
 }
@@ -144,7 +190,7 @@ a{
                     transform:scaleX(0%);
                     transform-origin:50%;
                     transition:$standard-transition;
-                    background-image:linear-gradient(90deg,#FFFFFF00,$lightColor,#FFFFFF00);
+                    background-image:linear-gradient(90deg,#FFFFFF00,$lightColor 35%,$lightColor 65%,#FFFFFF00);
                     opacity:0.5;
                 }
                 &:hover{

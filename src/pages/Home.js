@@ -17,9 +17,9 @@ const Home = () => {
                         </span>
                     </div>
                 </div>
+                {/* <div id="homepage-title-ripped-effect"></div> */}
             </div>
         </section>
-        {/* TODO: make a ripped paper transition between title and main section */}
         <section id="homepage-main-section">
             {/* 
 
