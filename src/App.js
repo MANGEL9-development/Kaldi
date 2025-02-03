@@ -14,6 +14,9 @@ function App() {
                 <Route path="developer">
                     <Route path="component-workshop" element={<ComponentWorkshop />}></Route>
                 </Route>
+
+                {/* TODO: replace this width a 404 page */}
+                <Route path="*" element={<Menu />} /> {/* This must be last */}
             </Routes>
         </BrowserRouter>
     );

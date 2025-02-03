@@ -7,7 +7,8 @@
                 "medium":8.12,
                 "large":8.36
             },
-            "description":"This is a description of what this item tastes like. A nice blend of gustatory imagery and culinary vocab makes this the perfect caption."
+            "description":"This is a description of what this item tastes like. A nice blend of gustatory imagery and culinary vocab makes this the perfect caption.",
+            "image":"drinks/kaldi-blend.png"
         }
     ],
     "teas":[

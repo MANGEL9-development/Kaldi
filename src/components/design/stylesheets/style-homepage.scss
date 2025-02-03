@@ -42,16 +42,19 @@
 
     // TODO: figure out how to get the torn page effect
     &::before {
+        $underside-height:4px;
         content: "";
         position: relative;
-        top: -28px;
-        height: 28px;
+        top: calc(-28px - $underside-height);
+        height: calc(28px + $underside-height);
         width: 100%;
         left: 0;
         background:{
-            image: url("../images/Effects/Torn page/rip.svg");
+            image:url("../images/Effects/Torn page/rip.svg"),
+                  url("../images/Effects/Torn page/rip_underside.svg");
             size:100%;
-            position:bottom;
+            position:left 0 bottom $underside-height,
+                     left 2px bottom 0px;
         };
         display:block;
         transform:scaleY(-1);

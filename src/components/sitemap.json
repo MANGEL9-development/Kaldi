@@ -46,7 +46,18 @@
         {
             "name":"About",
             "path":"About",
-            "children":[],
+            "children":[
+                {
+                    "name":"Location",
+                    "path":"About/location",
+                    "children":[]
+                },
+                {
+                    "name":"Reviews",
+                    "path":"About/reviews",
+                    "children":[]
+                }
+            ],
             "showInFooterSiteMap":true
         },
         {
@@ -54,7 +65,7 @@
             "path":"Contact",
             "children":[
                 {
-                    "name":"LinkedIn",
+                    "name":"Linkedin",
                     "path":"https://www.linkedin.com/in/mark-angelot/",
                     "target":"_blank",
                     "children":[]

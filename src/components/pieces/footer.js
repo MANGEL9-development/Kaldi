@@ -10,7 +10,9 @@ function Footer(){
             <div className="footer-section" id="footer-links">
                 <ul>
                     {
-                        sitemap.sites.map((site,index) => 
+                        sitemap.sites
+                            .filter((site) => site.showInFooterSiteMap==true)
+                            .map((site,index) => 
                             (
                                 <li key={index}>
                                     <a href={site.path}>{site.name}</a>
@@ -44,7 +46,8 @@ function Footer(){
                         Designed by&nbsp;
                     </span>
                     <a href="https://www.linkedin.com/in/mark-angelot/" target="_blank" rel="noreferrer">
-                        Mark E Angelot
+                        Mark E Angelot 
+                        {/* Change this link to the url of my portfolio when the site is done */}
                     </a>
                 </span>
             </div>

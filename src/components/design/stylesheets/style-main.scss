@@ -80,13 +80,13 @@ footer{
     background-color:$footerBackgroundColor;
     grid:{
         template:{
-            columns: auto 1fr;
+            // columns: auto 1fr;
             rows: auto 32px;
             areas:
                 "website-title  links" 
                 "copyright      copyright";
         }
-        column-gap: 15vh;
+        // column-gap: 15vh;
         row-gap: 15vh;
     }
 
@@ -302,7 +302,7 @@ a{
 
 #main-section{
     min-height:100vh;
-    background-color: #302725; // This was just kinda set out of the blue, so feel free to change if need be
+    background-color: hsl(11, 7%, 8%);
 
     padding:$page-outer-padding $page-outer-padding;
 }
