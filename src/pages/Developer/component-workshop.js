@@ -6,8 +6,8 @@ const ComponentWorkshop = () => {
     return <Subsite>
         <div>
             <h2>Inputs</h2>
-            <InputField placeholder="placeholder" />
-            <PasswordField />
+            <InputField placeholder="Text" />
+            <PasswordField placeholder="Password" />
         </div>
     </Subsite>
 };

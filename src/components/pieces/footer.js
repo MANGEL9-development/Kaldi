@@ -11,7 +11,7 @@ function Footer(){
                 <ul>
                     {
                         sitemap.sites
-                            .filter((site) => site.showInFooterSiteMap==true)
+                            .filter((site) => site.showInFooterSiteMap===true)
                             .map((site,index) => 
                             (
                                 <li key={index}>

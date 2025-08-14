@@ -1,18 +1,5 @@
 import sitemap from "../sitemap.json"
-
-function SearchBar(props){
-    return (
-        <form id="searchbar" class="">
-            <div id="search-input-container">
-                <input type="search" name="searchquery" id="search-input" placeholder={props.placeholder} />
-                {/* TODO: add .focused to #search-input-container when input is focused. remove on blur */}
-                <button type="submit">
-                    <div id="search-button-onhover"></div>
-                </button>
-            </div>
-        </form>
-    );
-}
+import {SearchBar} from "../Elements/inputs"
 
 function AccountIcon(){
     return (
@@ -20,7 +7,7 @@ function AccountIcon(){
     );
 }
 
-function menubar(){
+function navbar(){
     let links=[];
     sitemap.sites.forEach(function(site){
         links.push(
@@ -44,4 +31,4 @@ function menubar(){
     );
 }
 
-export default menubar;
+export default navbar;

@@ -72,13 +72,13 @@
                 },
                 {
                     "name":"GitHub",
-                    "path":"github.com/mangel9-development",
+                    "path":"https://www.github.com/mangel9-development",
                     "target":"_blank",
                     "children":[]
                 },
                 {
                     "name":"Handshake",
-                    "path":"joinhandshake.com/profiles/13172222",
+                    "path":"https://www.joinhandshake.com/profiles/13172222",
                     "target":"_blank",
                     "children":[]
                 }
