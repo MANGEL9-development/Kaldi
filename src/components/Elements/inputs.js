@@ -61,6 +61,13 @@ export function PasswordField(props){
            />
 }
 
+export function EmailField(props){
+    return <InputField
+                {...props}
+                type="email"
+           />
+}
+
 export function SearchBar(props){
     return (
         <form id="searchbar" class="">
@@ -76,3 +83,7 @@ export function SearchBar(props){
 }
 
 // TODO: eventually have something that has this liquid effect: https://codepen.io/Penno/pen/mVPqdb
+
+// TODO: Add input component for date, credit card number, expiration date (MM/YYYY), number picker
+//  (with + and - buttons), radio (and make radio fields like the blocks from Stylish Donuts),
+//  checkbox, 

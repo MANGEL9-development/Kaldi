@@ -1,5 +1,5 @@
 import Subsite from "../../components/page-templates/subsite";
-import {InputField, PasswordField} from "../../components/Elements/inputs";
+import {InputField, PasswordField, EmailField} from "../../components/Elements/inputs";
 
 const ComponentWorkshop = () => {
     document.title="Component Workshop";
@@ -7,6 +7,7 @@ const ComponentWorkshop = () => {
         <div>
             <h2>Inputs</h2>
             <InputField placeholder="Text" />
+            <EmailField placeholder="Email" errorMessage="Please enter a valid email address" />
             <PasswordField placeholder="Password" />
         </div>
     </Subsite>
