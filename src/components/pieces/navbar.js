@@ -7,7 +7,7 @@ function AccountIcon(){
     );
 }
 
-function navbar(){
+function Navbar(){
     let links=[];
     sitemap.sites.forEach(function(site){
         links.push(
@@ -31,4 +31,4 @@ function navbar(){
     );
 }
 
-export default navbar;
+export default Navbar;

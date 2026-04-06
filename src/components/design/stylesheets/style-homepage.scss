@@ -40,7 +40,6 @@
     min-height:110vh;
     background-color:$lightBackgroundColor;
 
-    // TODO: figure out how to get the torn page effect
     &::before {
         $underside-height:4px;
         content: "";
@@ -72,4 +71,66 @@
     //     background: url("../images/Effects/Torn page/rip.svg") bottom;
     //     background-size: 100%;
     // }
+
+    .homescreen-subsection{
+        padding:10vh 5vw;
+        color:$homescreen-text-color;
+
+        .homescreen-subsection-title{
+            color:$homescreen-text-color;
+            text-align: center;
+            padding: 0.75em 0;
+            border:{
+                width:2px;
+                image:linear-gradient(to right, #00000000 0%, $homescreen-text-color 5%, $homescreen-text-color 95%, #00000000) 1; /* The number '1' at the end is the border-image-slice value */
+                style:solid;
+                left:none;
+                right:none;
+            }
+        }
+
+        .homescreen-subsection-options-container{
+            display:flex;
+            justify-content: space-evenly;
+            padding-top: 3em;
+
+            .homescreen-subsection-option{
+                width: 17%;
+                aspect-ratio:1;
+                //border:2px solid $homescreen-text-color;
+                display: grid;
+                grid-template-rows: 1fr auto;
+                transition:$standard-transition;
+                opacity: 0.8;
+                &:hover{
+                    opacity: 1;
+
+                    .homescreen-subsection-option-image{
+                        transform: rotate(-3deg);
+                        img {
+                            width: 63%;
+                        }
+                    }
+                }
+
+                .homescreen-subsection-option-image{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    //height: 300px; /* Container must have a height */
+                    transition: $standard-transition;
+
+                    img {
+                        width: 60%;
+                        transition: $standard-transition;
+                    }
+                }
+                .homescreen-subsection-option-title{
+                    text-align: center;
+                    color:$homescreen-text-color;
+                    font-size:2.5em;
+                }
+            }
+        }
+    }
 }

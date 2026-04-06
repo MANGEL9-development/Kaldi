@@ -5,7 +5,7 @@ function Footer(){
     return (
         <footer>
             <div className="footer-section" id="footer-sitename">
-                <h2 class="website-title" id="footer-website-title">Kaldi</h2>
+                <h2 className="website-title" id="footer-website-title">Kaldi</h2>
             </div>
             <div className="footer-section" id="footer-links">
                 <ul>
