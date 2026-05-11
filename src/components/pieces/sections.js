@@ -21,3 +21,14 @@ export function HomescreenSubsectionOption(props){
         </Link>
     )
 }
+
+export function AccountForm({title,children}){ // TODO: add an onSubmit property
+    return(
+        <section className="accountform-container">
+            <h2 className="accountform-title">{title}</h2>
+            <form className="accountform">
+                {children}
+            </form>
+        </section>
+    );
+}

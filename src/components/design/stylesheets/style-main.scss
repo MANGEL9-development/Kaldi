@@ -444,3 +444,24 @@ a{
         }
     }
 }
+
+.accountform-container{
+    padding:2em;
+    border-radius:2.5em;
+    background:{
+        color:#7E4E46;
+    }
+    //color
+    width: 50%;
+    margin:auto;
+
+    .accountform-title{
+        text-align:center;
+    }
+
+    .accountform{
+        .input-field-container{
+            width: 100%;
+        }
+    }
+}

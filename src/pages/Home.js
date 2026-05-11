@@ -3,9 +3,7 @@ import footer from "../components/pieces/footer";
 import "../components/design/stylesheets/style-main.scss";
 import "../components/design/stylesheets/style-homepage.scss";
 import {HomescreenSubsection, HomescreenSubsectionOption} from "../components/pieces/sections";
-import coffeeIcon from "../components/design/images/menu/icons/coffee.png"; // https://www.flaticon.com/free-icon/coffee_1046887 by Freepik
-import teaIcon from "../components/design/images/menu/icons/tea-cup.png"; // https://www.flaticon.com/free-icon/tea-cup_3234827 by Freepik
-import juiceIcon from "../components/design/images/menu/icons/orange-juice.png"; // https://www.flaticon.com/free-icon/orange-juice_6288668 by Freepik
+import {menuIcons} from "../components/design/images/images";
 
 const Home = () => {
     return <>
@@ -31,9 +29,19 @@ const Home = () => {
             
             */}
             <HomescreenSubsection title="Drinks">
-                <HomescreenSubsectionOption title="Coffee" image={coffeeIcon} />
-                <HomescreenSubsectionOption title="Tea" image={teaIcon} />
-                <HomescreenSubsectionOption title="Juice" image={juiceIcon} /> {/* TODO: come up with a better name*/}
+                <HomescreenSubsectionOption title="Coffee" image={menuIcons.coffeeIcon} />
+                <HomescreenSubsectionOption title="Tea" image={menuIcons.teaIcon} />
+                <HomescreenSubsectionOption title="Juice" image={menuIcons.juiceIcon} /> {/* TODO: come up with a better name*/}
+            </HomescreenSubsection>
+            <HomescreenSubsection title="Sandwiches">
+                <HomescreenSubsectionOption title="Coffee" image={menuIcons.coffeeIcon} />
+                <HomescreenSubsectionOption title="Tea" image={menuIcons.teaIcon} />
+                <HomescreenSubsectionOption title="Juice" image={menuIcons.juiceIcon} /> {/* TODO: come up with a better name*/}
+            </HomescreenSubsection>
+            <HomescreenSubsection title="Desserts">
+                <HomescreenSubsectionOption title="Coffee" image={menuIcons.coffeeIcon} />
+                <HomescreenSubsectionOption title="Tea" image={menuIcons.teaIcon} />
+                <HomescreenSubsectionOption title="Juice" image={menuIcons.juiceIcon} /> {/* TODO: come up with a better name*/}
             </HomescreenSubsection>
         </section>
         {footer()}
